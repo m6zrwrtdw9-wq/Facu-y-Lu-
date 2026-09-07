@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#063d1e">
+  <title>Facu & Lu — Nuestra historia</title>
+  <link rel="icon" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQ3g5Jf4vM5v0H8G9X5qX5w5FQw5f4="
+      crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="opening" class="opening">
+    <div class="falling-hearts" aria-hidden="true"></div>
+    <div class="opening-inner">
+      <div class="eyebrow">UN REGALO PARA TI</div>
+      <h1>Lu</h1>
+      <button id="openGift" class="envelope" aria-label="Abrir regalo">
+        <span class="flap"></span>
+        <span class="heart">♥</span>
+      </button>
+      <button class="gold-button" id="openGift2">Toca para abrir</button>
+    </div>
+  </div>
+
+  <main id="page" class="page hidden">
+    <div class="deadline">⏱ La oportunidad especial expira en <b id="countdown">12:17</b></div>
+
+    <header class="hero">
+      <div>
+        <h1>Facu <span>&amp;</span> Lu</h1>
+        <p class="script">Juntos desde hace</p>
+        <strong id="relationship">10 meses y 4 días</strong>
+        <small id="relationshipTime">22h 39m 56s</small>
+      </div>
+      <button class="edit-pill" type="button">✎ Editar</button>
+    </header>
+
+    <section class="photo-section">
+      <figure class="polaroid tall"><img src="assets/images/foto-01.jpeg" alt="Recuerdo de Facu y Lu"></figure>
+      <div class="story-card">
+        <p class="script">Juntos desde hace</p>
+        <strong id="relationship2">10 meses y 4 días</strong>
+      </div>
+    </section>
+
+    <section class="photo-section reverse">
+      <figure class="polaroid"><img src="assets/images/foto-02.jpeg" alt="Recuerdo juntos"></figure>
+      <figure class="wide-photo"><img src="assets/images/foto-06.jpeg" alt="Nuestro recuerdo en el mar"></figure>
+    </section>
+
+    <section class="private-card">
+      <div class="eyebrow">MENSAJE PRIVADO</div>
+      <div class="lock-heart">♥</div>
+      <button class="outline-button" id="letterButton">ABRIR CARTA</button>
+    </section>
+
+    <section class="letter-card hidden" id="letter">
+      <p>Te amo hoy, mañana y siempre. Sos mi chica ideal, sos mi sueño hecho realidad y quiero que seamos siempre nosotros dos.</p>
+      <div class="eyebrow">CON AMOR</div>
+      <strong>Facu</strong>
+      <button class="outline-button" id="closeLetter">CERRAR</button>
+    </section>
+
+    <section class="photo-section">
+      <figure class="polaroid tall"><img src="assets/images/foto-03.jpeg" alt="Abrazo"></figure>
+      <div class="story-card">
+        <h2>Lo que más amo de Lu</h2>
+        <p>Amo todo de vos, pero si tuviera que elegir algo, sería tu forma de amarme porque me siento el chico más especial del mundo y el más feliz. Tenerte a vos es tenerlo todo.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div class="eyebrow">DÓNDE EMPEZÓ TODO</div>
+        <h2>Nuestros lugares</h2>
+        <p>Hay lugares que para cualquiera son solo lugares. Para nosotros, son recuerdos.</p>
+      </div>
+      <div class="map-card real-map-card">
+        <div id="loveMap" class="love-map"></div>
+      </div>
+      <div id="mapStory" class="map-story">
+        <div class="eyebrow">TOCÁ UN PIN</div>
+        <h3>Una historia por cada lugar</h3>
+        <p>Elegí un corazón del mapa para descubrir qué significa para nosotros.</p>
+      </div>
+    </section>
+
+    <section class="photo-section">
+      <figure class="polaroid"><img src="assets/images/foto-04.jpeg" alt="Otro recuerdo"></figure>
+      <div class="story-card">
+        <div class="eyebrow">COSAS QUE QUIERO HACER CONTIGO</div>
+        <h2>Nuestra lista</h2>
+        <ul class="dream-list">
+          <li>Poder cumplir nuestros sueños juntos</li>
+          <li>Vivir juntos algún día</li>
+          <li>Recorrer el mundo juntos</li>
+          <li>Tener un perrito</li>
+          <li>Casarnos con amor</li>
+          <li>Tener una mini vos</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Nuestros vales de amor</h2>
+        <p>Canjeable cuando quieras. Pero solo se puede usar una vez.</p>
+      </div>
+      <div class="vouchers" id="vouchers"></div>
+    </section>
+
+    <section class="photo-section">
+      <figure class="polaroid"><img src="assets/images/foto-06.jpeg" alt="Recuerdo especial"></figure>
+    </section>
+
+    <section class="music-card">
+      <div class="eyebrow">NUESTRA CANCIÓN</div>
+      <h2>Me falta algo</h2>
+      <p>Quevedo · <em>DONDE QUIERO ESTAR</em></p>
+      <button class="gold-button" id="musicButton">▶ ESCUCHAR NUESTRA CANCIÓN</button>
+      <div id="musicFrame" class="music-frame hidden">
+        <iframe
+          src="https://www.youtube.com/embed/Bzl4jl2ee5M?autoplay=1&loop=1&playlist=Bzl4jl2ee5M&controls=1&rel=0"
+          title="Me falta algo — Quevedo"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="final-message">
+      <p class="script">Lu,</p>
+      <h2>por todo lo que somos.</h2>
+      <h2>Te amo.</h2>
+      <div class="divider"></div>
+      <div class="eyebrow">CON CARIÑO</div>
+      <strong>Facu</strong>
+      <p class="forever">♥ Para siempre ♥</p>
+      <button class="gold-button" id="finalButton">♥ TERMINAR MI REGALO</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <div class="confetti" id="confetti"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
